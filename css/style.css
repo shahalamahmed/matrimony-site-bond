@@ -63,7 +63,6 @@ select.form-select:focus {
   font-weight: 500;
 }
 
-/* Progress bar */
 .progress {
   height: 8px;
   border-radius: 50px;
@@ -71,10 +70,11 @@ select.form-select:focus {
 }
 
 .progress-bar {
-  background-color: #dc2626;
-  /* Deep red */
+  background-image: linear-gradient(to right, #dc2626, #f59e0b, #22c55e);
+  background-size: 200% 100%;
+  background-position: left;
   border-radius: 50px;
-  transition: width 0.3s ease-in-out;
+  transition: width 0.4s ease, background-position 0.4s ease;
 }
 
 /* Buttons */
@@ -113,8 +113,6 @@ textarea.form-control {
 @media (max-width: 576px) {
   .container {
     padding: 20px;
-
-
 
   }
 }
