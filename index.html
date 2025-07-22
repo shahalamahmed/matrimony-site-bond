@@ -1,0 +1,334 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+
+
+  <div class="container my-5 py-5 mt-20 col-md-5 col-lg-7">
+    <h2 class="text-center mb-3">Create Your Biodata</h2>
+    <p class="text-center" id="step-title">Step 1 of 10</p>
+    <div class="progress mb-4">
+      <div class="progress-bar " id="progress-bar" style="width: 10%"></div>
+    </div>
+
+    <form id="biodata-form" class=" p-3">
+
+      <!-- Step 1: Basic Info -->
+      <div class="step">
+        <h5>Basic Information</h5>
+
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+        </div>
+
+        <div class="mb-3">
+          <label for="fatherName" class="form-label">Father's Name</label>
+          <input type="text" class="form-control" id="fatherName" placeholder="Enter father's name">
+        </div>
+
+        <div class="mb-3">
+          <label for="motherName" class="form-label">Mother's Name</label>
+          <input type="text" class="form-control" id="motherName" placeholder="Enter mother's name">
+        </div>
+      </div>
+
+      <!-- Step 2: Address Info -->
+      <div class="step d-none">
+        <h5>Address Information</h5>
+        <div class="mb-3">
+          <label for="presentAddress" class="form-label">Present Address</label>
+          <input type="text" id="presentAddress" class="form-control" placeholder="Enter present address">
+        </div>
+        <div class="mb-3">
+          <label for="permanentAddress" class="form-label">Permanent Address</label>
+          <input type="text" id="permanentAddress" class="form-control" placeholder="Enter permanent address">
+        </div>
+        <div class="mb-3">
+          <label for="upbringing" class="form-label">Place of Upbringing</label>
+          <input type="text" id="upbringing" class="form-control" placeholder="Enter place of upbringing">
+        </div>
+      </div>
+
+      <!-- Step 3: Educational Info -->
+      <div class="step d-none">
+        <h5>Educational Information</h5>
+        <label for="educationLevel" class="form-label">Select Education Level</label>
+        <select id="educationLevel" class="form-select mb-3">
+          <option selected disabled>Select Education Level</option>
+          <option>SSC</option>
+          <option>HSC</option>
+          <option>Honors</option>
+          <option>Masters</option>
+        </select>
+      </div>
+
+      <!-- Step 4: Family Info -->
+      <div class="step d-none">
+        <h5>Family Information</h5>
+        <div class="mb-3">
+          <label for="paternalUncle" class="form-label">Paternal Uncle's Profession</label>
+          <input type="text" id="paternalUncle" class="form-control" placeholder="Enter profession">
+        </div>
+        <div class="mb-3">
+          <label for="paternalAunt" class="form-label">Paternal Aunt's Profession</label>
+          <input type="text" id="paternalAunt" class="form-control" placeholder="Enter profession">
+        </div>
+        <div class="mb-3">
+          <label for="maternalUncle" class="form-label">Maternal Uncle's Profession</label>
+          <input type="text" id="maternalUncle" class="form-control" placeholder="Enter profession">
+        </div>
+        <div class="mb-3">
+          <label for="maternalAunt" class="form-label">Maternal Aunt's Profession</label>
+          <input type="text" id="maternalAunt" class="form-control" placeholder="Enter profession">
+        </div>
+      </div>
+
+
+
+      <!-- Step 5: Religious Information -->
+      <div class="step d-none">
+        <h5>Religious Information</h5>
+
+        <label class="form-label d-block mb-1">Are you religious?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="religious" id="religiousYes">
+          <label class="form-check-label" for="religiousYes">Yes</label>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="radio" name="religious" id="religiousNo">
+          <label class="form-check-label" for="religiousNo">No</label>
+        </div>
+
+        <label class="form-label d-block mb-1">Is your family religious?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="familyReligious" id="familyYes">
+          <label class="form-check-label" for="familyYes">Yes</label>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="radio" name="familyReligious" id="familyNo">
+          <label class="form-check-label" for="familyNo">No</label>
+        </div>
+
+        <label class="form-label d-block mb-1">Are you Muslim?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="muslim" id="muslimYes">
+          <label class="form-check-label" for="muslimYes">Yes</label>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="radio" name="muslim" id="muslimNo">
+          <label class="form-check-label" for="muslimNo">No</label>
+        </div>
+
+        <label class="form-label d-block mb-1">Do you perform Fard of Islam?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="fard" id="fardYes">
+          <label class="form-check-label" for="fardYes">Yes</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="fard" id="fardNo">
+          <label class="form-check-label" for="fardNo">No</label>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="radio" name="fard" id="skipFard">
+          <label class="form-check-label" for="skipFard">Skip this question</label>
+        </div>
+
+        <div class="mb-3">
+          <label for="madhab" class="form-label">Select Madhab</label>
+          <select class="form-select" id="madhab">
+            <option selected disabled>Select</option>
+            <option>Hanafi</option>
+            <option>Shafi'i</option>
+            <option>Maliki</option>
+            <option>Hanbali</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Step 6: Personal Information -->
+      <div class="step d-none">
+        <h5>Personal Information</h5>
+        <div class="mb-2">
+          <label for="favDrama" class="form-label">Favorite Drama</label>
+          <input type="text" id="favDrama" class="form-control" placeholder="Enter your favorite drama">
+        </div>
+        <div class="mb-2">
+          <label for="favBook" class="form-label">Favorite Book</label>
+          <input type="text" id="favBook" class="form-control" placeholder="Enter your favorite book">
+        </div>
+        <div class="mb-2">
+          <label for="favMovie" class="form-label">Favorite Movie/Series</label>
+          <input type="text" id="favMovie" class="form-control" placeholder="Enter favorite movie or series">
+        </div>
+        <div class="mb-2">
+          <label for="favTravel" class="form-label">Favorite Travel Destination</label>
+          <input type="text" id="favTravel" class="form-control" placeholder="Enter travel destination">
+        </div>
+        <div class="mb-2">
+          <label for="memorable" class="form-label">Memorable Event in Life</label>
+          <textarea id="memorable" class="form-control" placeholder="Share a memorable event..."></textarea>
+        </div>
+      </div>
+
+      <!-- Step 7: Work Information -->
+      <div class="step d-none">
+        <h5>Work Information</h5>
+        <div class="mb-2">
+          <label for="jobTitle" class="form-label">What's your job?</label>
+          <input type="text" id="jobTitle" class="form-control" placeholder="Enter your job title">
+        </div>
+        <div class="mb-2">
+          <label for="jobType" class="form-label">Select Job Type</label>
+          <select id="jobType" class="form-select">
+            <option selected disabled>Select Job Type</option>
+            <option>Government</option>
+            <option>Private</option>
+            <option>Freelancer</option>
+            <option>Student</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="jobDesc" class="form-label">Job Description</label>
+          <textarea id="jobDesc" class="form-control" placeholder="Describe your job..."></textarea>
+        </div>
+        <div class="mb-2">
+          <label for="incomeRangeText" class="form-label">Income Range</label>
+          <input type="text" id="incomeRangeText" class="form-control" placeholder="Enter your income range">
+        </div>
+        <div class="mb-2">
+          <label for="incomeRange" class="form-label">Select Income Range</label>
+          <select id="incomeRange" class="form-select">
+            <option selected disabled>Select Income Range</option>
+            <option>Less than 10,000</option>
+            <option>10,000 - 30,000</option>
+            <option>30,000 - 50,000</option>
+            <option>50,000+</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Step 8: Marriage Info -->
+      <div class="step d-none">
+        <h5>Marriage Related Information (Optional)</h5>
+        <div class="mb-2">
+          <label for="secondMarriage" class="form-label">Do you agree to 2nd marriage? If yes, why?</label>
+          <textarea id="secondMarriage" class="form-control" placeholder="Write your thoughts..."></textarea>
+        </div>
+        <div class="mb-2">
+          <label for="children" class="form-label">Number of Children</label>
+          <input type="number" id="children" class="form-control" placeholder="Enter number">
+        </div>
+
+        <label class="form-label d-block mb-1">Do your guardians agree?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="guardian" id="guardianYes">
+          <label class="form-check-label" for="guardianYes">Yes</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="guardian" id="guardianNo">
+          <label class="form-check-label" for="guardianNo">No</label>
+        </div>
+      </div>
+
+      <!-- Step 9: Expected Qualifications -->
+      <div class="step d-none">
+        <h5>Expected Qualifications</h5>
+        <div class="mb-2">
+          <label for="ageRange" class="form-label">Age Range</label>
+          <input type="text" id="ageRange" class="form-control" placeholder="e.g. 20-25">
+        </div>
+        <div class="mb-2">
+          <label for="complexion" class="form-label">Complexion</label>
+          <select id="complexion" class="form-select">
+            <option selected disabled>Select Complexion</option>
+            <option>Fair</option>
+            <option>Wheatish</option>
+            <option>Dark</option>
+            <option>Any</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="height" class="form-label">Height</label>
+          <input type="text" id="height" class="form-control" placeholder="e.g. 5'6''">
+        </div>
+        <div class="mb-2">
+          <label for="minEducation" class="form-label">Minimum Educational Qualification</label>
+          <input type="text" id="minEducation" class="form-control" placeholder="e.g. Masters">
+        </div>
+
+        <label class="form-label d-block mb-1">Do you expect any dowry?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="dowry" id="dowryYes">
+          <label class="form-check-label" for="dowryYes">Yes</label>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="radio" name="dowry" id="dowryNo">
+          <label class="form-check-label" for="dowryNo">No</label>
+        </div>
+
+      </div>
+      <div class="step d-none">
+        <h5 class="text-center mb-4">Consensual Deed (Agreement)</h5>
+
+        <div class="border-top border-bottom py-3 mb-4" style="border-color: #e0e0e0;">
+          <p class="mb-3">This is an agreement that all the above information is made with a sound and conscious mind.
+            All the information is authentic and true.</p>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="agreeTerms" required style="margin-top: 0.2rem;">
+            <label class="form-check-label" for="agreeTerms">
+              <strong>I agree to the terms and conditions</strong>
+            </label>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <p class="text-muted small mb-2">Note: Boys must upload profile picture (mandatory). Girls' picture uploading
+            is flexible.</p>
+          <h6 class="mb-2"><strong>Upload Profile Picture</strong></h6>
+          <button class="btn btn-light border" style="width: 100%; text-align: left; padding: 8px 12px;">
+            Click to upload
+          </button>
+        </div>
+
+
+      </div>
+      <div class="d-flex justify-content-between mt-4">
+        <button type="button" class="btn btn-secondary btn-light border" id="prevBtn">Previous</button>
+        <button type="button" class="btn btn-danger" id="nextBtn">Next</button>
+      </div>
+    </form>
+  </div>
+
+
+
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
